@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="sgpaStyle.css">
+    <title>SGPA Calculator</title>
+</head>
+
+<body>
+
+    <!-- Container -->
+    <div class="container">
+        <!-- Box -->
+        <div id="box">
+
+            <center>
+                <h1>KIIT UNIVERSITY</h1><br>
+                <h3>SGPA Calculator </h3>
+                <h5>(Btech CSE Branch)</h5><br>
+                <h4>Select the Semester</h4>
+            </center>
+            <div class="mainbox">
+                <div class="dropdown">
+                    <select class="form-select form-select mb-3" aria-label=".form-select-lg example" id="Sem">
+                        <option value="1">First Semester</option>
+                        <option value="2">Second Semester</option>
+                        <option value="3">Third Semester</option>
+                        <option value="4">Forth Semester</option>
+                        <option value="5">Fifth Semester</option>
+                        <option value="6">Sixth Semester</option>
+                        <option value="7">Seventh Semester</option>
+                        <option value="8">Eight Semester</option>
+                    </select>
+                    <button id="btn" type="button" class="btn btn-outline-success btn-lg"
+                        onclick="Sol()">Submit</button><br>
+                </div>
+
+            </div>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="index.html" aria-label="Previous">
+                            <span aria-hidden="true">&laquo; HOME</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Box -->
+        </div>
+
+
+        <!-- Box1 -->
+        <div id="box1">
+            <center>
+                <h1>KIIT UNIVERSITY</h1>
+                <h3>CGPA Calculator </h3>
+            </center>
+
+
+            <div id="first">
+                <center>
+                    <h5>First Semester</h5>
+                </center>
+
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Maths</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="maths" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Chemistry</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="chem" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="Number" class="col-sm-2 col-form-label">Professional Communication</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="pcom" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Biology</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="bio" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Computer Programming</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="comp" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Chemistry Lab</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="chemLab" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Language Lab</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="lang" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Engg.Graphics</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="engg" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+
+                <button type="button" class="btn btn-outline-primary btn-lg" onclick="firstSol()">Calculate</button>
+
+            </div>
+
+
+            <div id="second">
+                <center>
+                    <h5>Second Semester</h5>
+                </center>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Mathematics-II</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="Mathematics-II" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Physics</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="phy" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="Number" class="col-sm-2 col-form-label">Basic Electrical Engineering</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="bee" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Analog Electronic Circuits</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="aec" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Physics Lab</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="phyLab" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Basic Electrical Engineering Lab</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="beeLab" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Analog Electronic Circuits Lab</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="aecLab" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Basic Manufacturing Systems</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="bms" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Environmental Science</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="evs" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Yoga and Human Consciousness</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="yoga" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-outline-primary btn-lg" onclick="secondSol()">Calculate</button>
+
+            </div>
+
+            <!-- 3rd Sem -->
+            <div id="third">
+                <center>
+                    <h5>Third Semester</h5>
+                </center>
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Data Structures and Algorithms</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="dsa" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Digital Electronics</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="de" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="Number" class="col-sm-2 col-form-label">HS Elective-I</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="hs1" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Discrete Mathematics</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="dms" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Object Oriented Programming</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="oop" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Probability & Statistics</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="ps" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Data Structures Laboratory</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="dsaLab" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Object Oriented Programming</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="oopLab" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-outline-primary btn-lg" onclick="thirdSol()">Calculate</button>
+
+
+            </div>
+
+
+
+            <!-- 4th Sem -->
+            <div id="four">
+                <center>
+                    <h5>Forth Semester</h5>
+                </center>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Operating Systems</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="os" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Automata and Formal Languages</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="afl" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="Number" class="col-sm-2 col-form-label">Web Technology</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="web" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Database Management System</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="dbms" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Computer Architecture</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="coa" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Principle of Digital Communication</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="pdc" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Database Management System Laboratory</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="dbmsLab" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Operating Systems Laboratory</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="osLab" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Web Technology Laboratory</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="webLab" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Business Communication</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="bcom" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-outline-primary btn-lg" onclick="fourSol()">Calculate</button>
+            </div>
+
+            <!-- 5th Sem -->
+            <div id="five">
+                <h5>Fifth Semester</h5>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">High Performance Computing</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="hpc" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Computer Networks</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="cn" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="Number" class="col-sm-2 col-form-label">Design and Analysis of Algorithms</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="daa" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Software Engineering</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="se" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Department Elective-I</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="de1" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Department Elective-II</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="de2" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Networks Laboratory</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="netLab" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Algorithms Laboratory</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="algoLab" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-outline-primary btn-lg" onclick="fiveSol()">Calculate</button>
+
+
+            </div>
+
+            <!-- 6th Sem -->
+            <div id="six">
+                <center>
+                    <h5>Sixth Semester</h5>
+                </center>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Compiler Design</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="cd" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Cloud Computing</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="cc" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="Number" class="col-sm-2 col-form-label">Department Elective-III</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="de3" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Department Elective-IV</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="de4" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Department Elective-V</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="de5" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Open Elective -I / (MI-1)</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="oe1" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Tools and Techniques Laboratory</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="ttLAB" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Cloud Computing Lab</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="ccLAB" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Minor Project</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="minor" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-outline-primary btn-lg" onclick="sixSol()">Calculate</button>
+
+
+            </div>
+
+            <!-- 7th Sem -->
+            <div id="seven">
+                <center>
+                    <h5>Seventh Semester</h5>
+                </center>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">HS Elective-II</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="hs2" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Professional Practice, Law & Ethics</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="pp" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="Number" class="col-sm-2 col-form-label">Open Elective-II / (MI-2)</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="oe2" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">MI-3</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="mi3" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">MI-4</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="mi4" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">HO-1</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="ho1" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Project-I/Internship</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="pi" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Practical Training</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="pt" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">Project – Minor / Lab</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="pm" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-outline-primary btn-lg" onclick="sevenSol()">Calculate</button>
+
+
+            </div>
+
+            <!-- 8th Sem -->
+            <div id="eight">
+                <center>
+                    <h5>Eight Semester</h5>
+                </center>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">MI–5</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="mi5" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">MI–6</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="mi6" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="Number" class="col-sm-2 col-form-label">HO-2</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="ho2" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">HO-3</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="ho3" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">pi</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="pi" placeholder="Enter Grade point e.g. 0-10"  >
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-outline-primary btn-lg" onclick="eightSol()">Calculate</button>
+
+            </div>
+
+            <div id="result">
+                <div class="mb-3 row">
+                    <label for="number" class="col-sm-2 col-form-label">SGPA</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" id="sgpa" disabled>
+                    </div>
+                </div>
+            </div>
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="index.html" aria-label="Previous">
+                            <span aria-hidden="true">&laquo; HOME</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- BOX 1 -->
+        </div>
+
+
+
+        <!-- Container -->
+    </div>
+
+
+
+
+
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+<script src="sgpaScript.js"></script>
+
+</html>

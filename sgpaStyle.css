@@ -1,0 +1,90 @@
+body {
+    background-color: #7B68EE;
+    
+     /* background-image: url("KIIT.jpg");
+     background-repeat: no-repeat ;
+     background-size: 100% 100%;
+     background-attachment: fixed; */
+}
+
+.container {
+    height: 100vh;
+
+}
+
+#box {
+    border: 2px solid black;
+    padding: 2vw;
+    display: block;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+}
+
+#box1 {
+    display: none;
+    padding-top: 8vw;
+    padding: 2vw;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#first,
+#second,
+#third,
+#four,
+#five,
+#six,
+#seven,
+#eight {
+    display: none;
+}
+h1,button:hover{
+    background-color: greenyellow;
+    cursor: pointer;
+    box-shadow: 10px 10px rgba(129, 122, 122, 0.424);
+}
+
+.form-select {
+    font-size: 1.2rem;
+}
+
+#btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#result {
+    margin-top: 1vw;
+    display: none;
+}
+
+.mainbox {
+    margin-top: 2vw;
+    display: flex;
+    justify-content: center;
+}
+h3{
+    /* margin-bottom: 2vw; */
+}
+input{
+    text-align: center;
+}
+.page-link{
+    margin-top: 2vw;
+}
+.page-link:hover{
+    background-color: greenyellow;
+    cursor: pointer;
+    box-shadow: 10px 10px rgba(129, 122, 122, 0.424);
+}
